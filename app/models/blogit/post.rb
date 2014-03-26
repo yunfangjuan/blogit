@@ -11,6 +11,7 @@ module Blogit
     # = Validations =
     # ===============
 
+    attr_accessible :title, :body, :blogger_id
     validates :title, presence: true, length: { minimum: 10, maximum: 66 }
     validates :body,  presence: true, length: { minimum: 10 }
     validates :blogger_id, presence: true

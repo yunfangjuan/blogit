@@ -41,6 +41,7 @@ module Blogit
     # nickname acts as a "honeypot" to catch spam
     # the form field should be hidden using CSS and so 
     # if present, must be spam.
+    attr_accessible :nickname, :name, :email, :body, :website
     validates :nickname, absence: true
     validates :name, presence: true
     validates :email, presence: true, format: {with: EMAIL_REGEX, allow_blank: true }
